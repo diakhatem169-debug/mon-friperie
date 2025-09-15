@@ -10,7 +10,11 @@
   <header>
     <nav class="navbar">
       <div class="logo">👗 Friperie Luxe</div>
-      <ul class="nav-links">
+
+      <!-- Bouton hamburger -->
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+      <ul class="nav-links" id="navLinks">
         <li><a href="FriperieLuxe.html">Accueil</a></li>
         <li><a href="boutique.html">Boutique</a></li>
         <li><a href="galerie.html">Galerie</a></li>
@@ -32,5 +36,11 @@
   <footer>
     <p>&copy; 2025 Friperie Luxe</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
