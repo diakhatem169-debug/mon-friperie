@@ -10,7 +10,11 @@
   <header>
     <nav class="navbar">
       <div class="logo">👗 Friperie Chic</div>
-      <ul class="nav-links">
+
+      <!-- Bouton hamburger -->
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+      <ul class="nav-links" id="navLinks">
         <li><a href="FriperieLuxe.html">Accueil</a></li>
         <li><a href="boutique.html">Boutique</a></li>
         <li><a href="galerie.html">Galerie</a></li>
@@ -23,8 +27,8 @@
   <section class="gallery">
     <h2>Nos Inspirations</h2>
     <div class="gallery-grid">
-      <img src="whitedress1.png" alt="Look 1">
-      <img src="vetements4.png" alt="Look 2">
+      <img src="vetements4.png" alt="Look 1">
+      <img src="whitedress1.png" alt="Look 2">
       <img src="topshirt2.png" alt="Look 3">
     </div>
   </section>
@@ -32,5 +36,11 @@
   <footer>
     <p>&copy; 2025 Friperie Chic</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
