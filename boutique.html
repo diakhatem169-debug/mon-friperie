@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boutique - Friperie Chic</title>
+  <title>Boutique - Friperie Luxe</title>
   <link rel="stylesheet" href="diakhate.css">
 </head>
 <body>
   <header>
     <nav class="navbar">
-      <div class="logo">👗 Friperie Chic</div>
-      <ul class="nav-links">
+      <div class="logo">👗 Friperie Luxe</div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="navLinks">
         <li><a href="FriperieLuxe.html">Accueil</a></li>
         <li><a href="boutique.html">Boutique</a></li>
         <li><a href="galerie.html">Galerie</a></li>
@@ -20,23 +21,23 @@
     </nav>
   </header>
 
-  <section class="products">
-    <h2>Nos Articles</h2>
+  <section class="shop">
+    <h2>Notre Boutique</h2>
     <div class="product-grid">
       <div class="product-card">
-        <img src="robe.png" alt="Robe ">
-        <h3>Robe </h3>
-        <p>1500 CFA</p>
-      </div>
-      <div class="product-card">
         <img src="Débardeur.png" alt="Débardeur">
-        <h3>Débardeur crop top</h3>
-        <p>1500 CFA</p>
+        <h3>Débardeur</h3>
+        <p class="price">1500 FCFA</p>
       </div>
       <div class="product-card">
-        <img src="crop top1.png" alt="Crop Top">
-        <h3>Crop Top</h3>
-        <p>1500 CFA</p>
+        <img src="Robe.png" alt="Robe Orange">
+        <h3>Robe Chic</h3>
+        <p class="price">1500 FCFA</p>
+      </div>
+      <div class="product-card">
+        <img src="crop top1.png" alt="crop top1">
+        <h3>Crop top</h3>
+        <p class="price">1500 FCFA</p>
       </div>
     </div>
   </section>
@@ -44,5 +45,11 @@
   <footer>
     <p>&copy; 2025 Friperie Luxe</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
