@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Friperie Chic - Accueil</title>
+  <title>Accueil - Friperie Luxe</title>
   <link rel="stylesheet" href="diakhate.css">
 </head>
 <body>
   <header>
     <nav class="navbar">
-      <div class="logo">👗 Friperie luxe</div>
-      <ul class="nav-links">
+      <div class="logo">👗 Friperie Luxe</div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="navLinks">
         <li><a href="FriperieLuxe.html">Accueil</a></li>
         <li><a href="boutique.html">Boutique</a></li>
         <li><a href="galerie.html">Galerie</a></li>
@@ -21,13 +22,20 @@
   </header>
 
   <section class="hero">
-    <h1>Bienvenue chez Friperie Luxe</h1>
-    <p>Des vêtements de seconde main stylés et abordables ✨</p>
+    <h2>Bienvenue chez Friperie Luxe</h2>
+    <p>Des vêtements de qualité, uniques et durables, pour un style chic sans vous ruiner.</p>
     <a href="boutique.html" class="btn">Découvrir la boutique</a>
+
   </section>
 
   <footer>
-    <p>&copy; 2025 Friperie Luxe - Tous droits réservés</p>
+    <p>&copy; 2025 Friperie Luxe</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
