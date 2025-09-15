@@ -1,41 +1,99 @@
-/* Style global */
+/* ===================== */
+/* 🎨 STYLES GÉNÉRAUX */
+/* ===================== */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8f8f8;
   color: #333;
 }
 
-/* Navbar */
+h2 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 28px;
+  color: #222;
+}
+
+p {
+  max-width: 800px;
+  margin: 15px auto;
+  line-height: 1.6;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* ===================== */
+/* 🌐 NAVBAR */
+/* ===================== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 25px;
   background: #222;
-  padding: 15px 30px;
+  color: white;
+  position: relative;
 }
+
 .logo {
-  color: #fff;
   font-size: 20px;
   font-weight: bold;
 }
+
 .nav-links {
-  list-style: none;
   display: flex;
   gap: 20px;
+  list-style: none;
 }
+
 .nav-links li a {
-  color: #fff;
+  color: white;
   text-decoration: none;
-  transition: 0.3s;
+  font-weight: bold;
+  transition: color 0.3s;
 }
+
 .nav-links li a:hover {
   color: #f39c12;
 }
 
+/* ===================== */
+/* 🍔 HAMBURGER MENU */
+/* ===================== */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Styles pour mobile/tablette */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #222;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
 /* Hero */
 .hero {
-  background: url("vetements3.png") no-repeat center center/cover;
+  background: url("vetements5.png") no-repeat center center/cover;
   height: 70vh;
   display: flex;
   flex-direction: column;
@@ -59,72 +117,96 @@ body {
   background: #e67e22;
 }
 
-/* Produits */
-.products {
-  padding: 40px;
-  text-align: center;
-}
+/* ===================== */
+/* 🛍️ PRODUITS */
+/* ===================== */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
+  padding: 20px;
 }
+
 .product-card {
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
   padding: 15px;
+  transition: transform 0.3s;
 }
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
 .product-card img {
   width: 100%;
-  border-radius: 10px;
+  height: auto;
+  border-radius: 6px;
 }
 
-/* Galerie */
-.gallery {
-  padding: 40px;
-  text-align: center;
+.product-card h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: #222;
 }
+
+.product-card .price {
+  font-size: 16px;
+  color: #f39c12;
+  font-weight: bold;
+}
+
+
+
+/* ===================== */
+/* 🖼️ GALERIE */
+/* ===================== */
+.gallery {
+  padding: 20px;
+}
+
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
+  margin-top: 20px;
 }
+
 .gallery-grid img {
   width: 100%;
-  border-radius: 10px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
-/* Contact */
-.contact {
-  padding: 40px;
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* ===================== */
+/* ℹ️ À PROPOS */
+/* ===================== */
+.about {
+  padding: 40px 20px;
   text-align: center;
-}
-.contact a {
-  color: #f39c12;
-  text-decoration: none;
-}
-.contact a:hover {
-  text-decoration: underline;
+  background: #fff;
+  border-radius: 8px;
+  max-width: 900px;
+  margin: 30px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Footer */
+/* ===================== */
+/* 📌 FOOTER */
+/* ===================== */
 footer {
+  text-align: center;
   background: #222;
   color: white;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 30px;
+  padding: 15px;
+  margin-top: 40px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    background: #333;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    display: none;
-  }
-}
